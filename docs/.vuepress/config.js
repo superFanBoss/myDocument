@@ -39,9 +39,17 @@ module.exports = {
             title: "快速开始",
             collapsable: true,
             children: [
-                'androidConfig'
+                ''
             ]
+          },
+          {
+            title: "插件使用",
+            collapsable: true,
+            children: [
+                'react-navigation'
+            ]  
           }
+
         ]
     }
 }
