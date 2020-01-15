@@ -5,7 +5,7 @@
 ### 1、**生成一个公司用的SSH-Key**
 
 ```
-$ ssh-keygen -t rsa -C "usermail@company.com” -f ~/.ssh/id_rsa
+$ ssh-keygen -t rsa -C "usermail@company.com" -f ~/.ssh/id_rsa
 ```
 
 
@@ -13,7 +13,7 @@ $ ssh-keygen -t rsa -C "usermail@company.com” -f ~/.ssh/id_rsa
 ### 2、生成一个github用的SSH-Key
 
 ```
-$ ssh-keygen -t rsa -C "usermail@github.com” -f ~/.ssh/github_rsa
+$ ssh-keygen -t rsa -C "usermail@github.com" -f ~/.ssh/github_rsa
 ```
 
 
