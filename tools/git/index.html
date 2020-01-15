@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git | 十一点半</title>
+    <meta name="description" content="Just playing around">
+    
+    
+    <link rel="preload" href="/myDocument/assets/css/0.styles.b6d5b40c.css" as="style"><link rel="preload" href="/myDocument/assets/js/app.491e06b8.js" as="script"><link rel="preload" href="/myDocument/assets/js/2.5c0da428.js" as="script"><link rel="preload" href="/myDocument/assets/js/12.47791bd2.js" as="script"><link rel="prefetch" href="/myDocument/assets/js/10.69e56887.js"><link rel="prefetch" href="/myDocument/assets/js/11.3b18ce13.js"><link rel="prefetch" href="/myDocument/assets/js/13.57f9c5a6.js"><link rel="prefetch" href="/myDocument/assets/js/14.ae969792.js"><link rel="prefetch" href="/myDocument/assets/js/3.48ebea13.js"><link rel="prefetch" href="/myDocument/assets/js/4.e66c893f.js"><link rel="prefetch" href="/myDocument/assets/js/5.952f29f4.js"><link rel="prefetch" href="/myDocument/assets/js/6.7f634522.js"><link rel="prefetch" href="/myDocument/assets/js/7.0ee56fde.js"><link rel="prefetch" href="/myDocument/assets/js/8.a5d131ca.js"><link rel="prefetch" href="/myDocument/assets/js/9.7e489372.js">
+    <link rel="stylesheet" href="/myDocument/assets/css/0.styles.b6d5b40c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myDocument/" class="home-link router-link-active"><!----> <span class="site-name">十一点半</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myDocument/" class="nav-link">简介</a></div><div class="nav-item"><a href="/myDocument/smallProgram/" class="nav-link">小程序</a></div><div class="nav-item"><a href="/myDocument/reactNative/" class="nav-link">ReactNative</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myDocument/tools/git/" class="nav-link router-link-exact-active router-link-active">git</a></li><li class="dropdown-item"><!----> <a href="/myDocument/tools/webstom/" class="nav-link">webstom</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myDocument/" class="nav-link">简介</a></div><div class="nav-item"><a href="/myDocument/smallProgram/" class="nav-link">小程序</a></div><div class="nav-item"><a href="/myDocument/reactNative/" class="nav-link">ReactNative</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myDocument/tools/git/" class="nav-link router-link-exact-active router-link-active">git</a></li><li class="dropdown-item"><!----> <a href="/myDocument/tools/webstom/" class="nav-link">webstom</a></li></ul></div></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git"><a href="#git" aria-hidden="true" class="header-anchor">#</a> Git</h1> <h2 id="git-配置多个ssh-key"><a href="#git-配置多个ssh-key" aria-hidden="true" class="header-anchor">#</a> Git 配置多个SSH key</h2> <h3 id="_1、生成一个公司用的ssh-key"><a href="#_1、生成一个公司用的ssh-key" aria-hidden="true" class="header-anchor">#</a> 1、<strong>生成一个公司用的SSH-Key</strong></h3> <div class="language- extra-class"><pre class="language-text"><code>$ ssh-keygen -t rsa -C &quot;usermail@company.com&quot; -f ~/.ssh/id_rsa
+</code></pre></div><h3 id="_2、生成一个github用的ssh-key"><a href="#_2、生成一个github用的ssh-key" aria-hidden="true" class="header-anchor">#</a> 2、生成一个github用的SSH-Key</h3> <div class="language- extra-class"><pre class="language-text"><code>$ ssh-keygen -t rsa -C &quot;usermail@github.com&quot; -f ~/.ssh/github_rsa
+</code></pre></div><h3 id="_3、添加私钥"><a href="#_3、添加私钥" aria-hidden="true" class="header-anchor">#</a> 3、添加私钥</h3> <div class="language- extra-class"><pre class="language-text"><code>$ ssh-add ~/.ssh/id_rsa
+$ ssh-add ~/.ssh/github_rsa
+</code></pre></div><p>Tip:如果提示”Could not open a connection to your authentication agent”，执行</p> <div class="language- extra-class"><pre class="language-text"><code>$ ssh-agent bash
+</code></pre></div><p>再次运行 ssh-add</p> <p><strong>查看私钥列表</strong></p> <div class="language- extra-class"><pre class="language-text"><code>$ ssh-add -l
+</code></pre></div><p><strong>删除私钥列表</strong></p> <div class="language- extra-class"><pre class="language-text"><code>$ ssh-add -D 
+</code></pre></div><h3 id="_4、修改配置文件"><a href="#_4、修改配置文件" aria-hidden="true" class="header-anchor">#</a> 4、修改配置文件</h3> <p>在~/.ssh/目录下创建config文件（对，就是没有后缀）</p> <div class="language- extra-class"><pre class="language-text"><code>$ touch config
+</code></pre></div><p>在config文件中配置一下内容</p> <div class="language- extra-class"><pre class="language-text"><code># github
+Host github.com
+Port 22
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+User zhangsan
+
+# gitlab_company
+Host 144.20.80.215
+HostName 144.20.80.215
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/company_rsa
+User zhangsan
+</code></pre></div><p>然后就好了。。。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/myDocument/assets/js/app.491e06b8.js" defer></script><script src="/myDocument/assets/js/2.5c0da428.js" defer></script><script src="/myDocument/assets/js/12.47791bd2.js" defer></script>
+  </body>
+</html>
