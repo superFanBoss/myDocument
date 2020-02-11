@@ -8,6 +8,22 @@ module.exports = [
         link: '/smallProgram/'
     },
     {
+        text: 'React',
+        link: '/react/'
+    },
+    {
+        text: '语言',
+        items: [{
+            text: 'ES6',
+            link: '/language/ES6/'
+          },
+          {
+            text: 'ES7',
+            link: '/language/ES7/'
+          }
+        ]
+    },
+    {
         text: 'ReactNative',
         link: '/reactNative/'
     },
